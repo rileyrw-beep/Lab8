@@ -50,11 +50,12 @@ def show_pakuri(p):
     print(f"Speed: {stat_list[2]}")
 
 def add_pakuri(p):
+    if p.get_size() == p.get_capacity():
+        print("Error: Pakudex is full!")
+        return
     desired_pakuri = input("Enter the name of the species to add: ")
     if p.add_pakuri(desired_pakuri):
         print(f"Pakuri species {desired_pakuri} successfully added!")
-    elif p.get_size() == p.get_capacity():
-        print("Error: Pakudex is full!")
     else:
         print("Error: Pakudex already contains this species!")
 
