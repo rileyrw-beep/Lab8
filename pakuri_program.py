@@ -70,8 +70,8 @@ def main():
 
     #the game loop:
     while True:
-        print_menu()
         while True:
+            print_menu()
             try:
                 choice = int(input("What would you like to do? "))
             except ValueError:
