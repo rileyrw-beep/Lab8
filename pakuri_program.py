@@ -6,9 +6,12 @@ def print_introduction():
         try:
             max_capacity = int(input("Enter max capacity of the Pakudex: "))
         except ValueError:
-            print("Please enter a number")
+            print("Please enter a valid size.")
         else:
-            break
+            if (max_capacity < 0):
+                print("Please enter a valid size.")
+            else:
+                break
     print(f"The Pakudex can hold {max_capacity} species of Pakuri.")
     print("")
 
@@ -72,17 +75,14 @@ def main():
             try:
                 choice = int(input("What would you like to do? "))
             except ValueError:
-                print()
-                print("Please enter an integer between 1 and 6 inclusive.")
-                print()
+                print("Unrecognized menu selection!")
             else:
                 if (choice >= 1 and choice <= 6):
                     break
                 else:
-                    print()
-                    print("Please enter an integer between 1 and 6 inclusive.")
-                    print()
-        print()
+                    print("Unrecognized menu selection!")
+
+
         match choice:
             case 1:
                 print_pakudex(p)
