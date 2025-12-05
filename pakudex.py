@@ -27,7 +27,7 @@ class Pakudex:
 
     def add_pakuri(self, species):
         ls = self.get_species_array()
-        if len(self.pakudex_list) == self.capacity and (ls is None or species not in ls):
+        if ls is None or species not in ls:
             self.pakudex_list.append(Pakuri(species))
             return True
         return False
