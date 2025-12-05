@@ -15,11 +15,12 @@ def print_introduction():
     print(f"The Pakudex can hold {max_capacity} species of Pakuri.")
     print("")
 
-    print("Pakudex Main Menu")
-    print("-----------------")
+
     return max_capacity
 
 def print_menu():
+    print("Pakudex Main Menu")
+    print("-----------------")
     print("1. List Pakuri")
     print("2. Show Pakuri")
     print("3. Add Pakuri")
